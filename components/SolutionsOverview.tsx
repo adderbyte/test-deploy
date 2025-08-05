@@ -9,60 +9,42 @@ import Image from "next/image";
 const solutions = [
   {
     id: 1,
-    category: "Multisided Ecosystem",
-    title: "AI-Enabled Multi-Sided Market",
-    description: "Bridge data and decisions across a multisided network of producers, providers, and consumers. Polymarq fuses AI and economics to orchestrate living systems — where data becomes a currency of coordination, enabling real-time pricing, preference learning and matching, and dynamic value creation at scale.",
+    category: "AI-Enabled Multi-Sided Market",
+    title: "Unlock intelligent collaboration",
+    description:
+      "Polymarq facilitates dynamic ecosystems where data flows across stakeholders — enabling real-time pricing, service verification, and performance optimization at scale.",
     benefits: [
-      "Creating measurable and scalable economic value",
-      "Providing competitive, transparent tools empowering service providers",
-      "Delivering superior value and experiences to end users"
+      "Insightful governance tools for public agencies",
+      "Competitive and transparent tools for service providers",
+      "Access and control for everyday users",
     ],
     useCases: [
       "Smart logistics and delivery networks",
+      "Shared energy or water utilities",
       "Public-private service platforms",
-      "Multisided marketplaces"
     ],
     imgUrl: Solution1,
-    bgColor: "bg-purple-100"
+    bgColor: "bg-purple-100",
   },
-  // {
-  //   id: 2,
-  //   category: "AI-HAL + AI-IoT Core Engine",
-  //   title: "Where sensing meets reasoning",
-  //   description:
-  //     "At the core of Polymarq is a high-performance AI engine that blends edge-device inference with centralized orchestration — enabling autonomous infrastructure at scale.",
-  //   benefits: [
-  //     "Edge devices that respond intelligently in real-time",
-  //     "Efficient orchestration between hardware and software",
-  //     "Foundation for robotics and autonomous agents",
-  //   ],
-  //   useCases: [
-  //     "AI-guided waste collection and recycling",
-  //     "Smart traffic light control",
-  //     "Microgrid energy management",
-  //   ],
-  //   imgUrl: Solution2,
-  //   bgColor: "bg-green-100",
-  // },
   {
     id: 2,
-    category: "Edge AI",
-    title: "Robust Edge Inference",
-    description: "Polymarq is developing a hardware-aware edge platform for high-performance, low-latency deployment of AI models in mission-critical environments. Built with ONNX-MLIR and optimized for FPGA/ASIC hardware, it enables reliable execution, efficient resource usage, and real-time decision-making directly at the edge.",
+    category: "AI-HAL + AI-IoT Core Engine",
+    title: "Where sensing meets reasoning",
+    description:
+      "At the core of Polymarq is a high-performance AI engine that blends edge-device inference with centralized orchestration — enabling autonomous infrastructure at scale.",
     benefits: [
-      "Efficient Inference ML at Egge",
-      "Optimized resource utilization on custom hardware"
+      "Edge devices that respond intelligently in real-time",
+      "Efficient orchestration between hardware and software",
+      "Foundation for robotics and autonomous agents",
     ],
     useCases: [
-      "Automotive (ADAS and autonomous systems)",
-  "Telecom (5G/6G infrastructure)",
-  "Industrial automation and robotics",
-  "Networking (edge and data center)",
-  "Smart energy and utilities"
+      "AI-guided waste collection and recycling",
+      "Smart traffic light control",
+      "Microgrid energy management",
     ],
     imgUrl: Solution2,
-    bgColor: "bg-green-100"
-  }
+    bgColor: "bg-green-100",
+  },
 ];
 
 export default function SolutionsOverview() {

@@ -30,7 +30,7 @@ export default function BuildTogether() {
               Let's Build Smarter Systems Together
             </h2>
 
-            <p className="text-lg bg-gradient-to-r from-white  via-purple-700  to-red-400 mb-18 max-w-2xl mx-auto leading-relaxed inline-block text-transparent bg-clip-text">
+            <p className="text-lg text-white mb-18 max-w-2xl mx-auto leading-relaxed inline-block ">
               Get in touch to learn how Polymarq can bring intelligence to your infrastructure or operations.
             </p>
             

@@ -9,31 +9,44 @@ export default function IndustriesWeServe() {
   const industries = [
     {
       title: "Intelligent Infrastructure",
-      description: "Urban infrastructure integrated with digital tools to manage energy, waste, and water.",
+      description:
+        "Urban infrastructure integrated with digital tools to manage energy, waste, and water.",
+      examples:
+        "Digital twins, smart grid, city operations dashboards, municipal utilities.",
       position: "large-left",
       image: Industry1,
     },
     {
       title: "Telecom & Edge Networks",
-      description: "Telecom infrastructure, fiber, 5G, and distributed edge computing systems.",
+      description:
+        "Telecom infrastructure, fiber, 5G, and distributed edge computing systems.",
+      examples:
+        "Rakuten’s 5G stack, Open RAN, MEC platforms, fiber rollout planners.",
       position: "top-right",
       image: Industry2,
     },
     {
       title: "Connected Mobility",
-      description: "Smart transportation systems, connected vehicles, and intelligent fleet operations.",
+      description:
+        "Smart transportation systems, connected vehicles, and intelligent fleet operations.",
+      examples: "Fleet routing.",
       position: "top-far-right",
       image: Industry4,
     },
     {
       title: "Platform Ecosystems",
-      description: "Multi-sided, data platforms enabling coordination across producers and users.",
+      description:
+        "Multi-sided, data platforms enabling coordination across producers and users.",
+      examples: "Logistics API, smart waste platforms.",
       position: "bottom-right",
       image: Industry3,
     },
     {
       title: "Autonomous Systems & Automation",
-      description: "Industrial robotics, factory control, and intelligent automation for production.",
+      description:
+        "Industrial robotics, factory control, and intelligent automation for production.",
+      examples:
+        "Robots, smart factories, distributed PLCs, AI-driven quality control.",
       position: "bottom-far-right",
       image: Industry5,
     },
@@ -46,7 +59,7 @@ export default function IndustriesWeServe() {
           Focus Areas
         </h2>
 
-        {/* Mobile Layout - Single column stack */}
+        {/* Mobile Layout */}
         <div className="block sm:hidden space-y-6">
           {industries.map((industry, index) => (
             <div
@@ -63,17 +76,20 @@ export default function IndustriesWeServe() {
               <h3 className="text-lg font-bold text-gray-900 mb-2">
                 {industry.title}
               </h3>
-              <p className="text-gray-600 text-sm leading-relaxed">
+              <p className="text-gray-600 text-sm mb-1 leading-relaxed">
                 {industry.description}
+              </p>
+              <p className="text-gray-500 text-xs italic">
+                <strong>Example systems:</strong> {industry.examples}
               </p>
             </div>
           ))}
         </div>
 
-        {/* Tablet Layout - 2x3 grid with featured card */}
+        {/* Tablet Layout */}
         <div className="hidden sm:block lg:hidden">
           <div className="grid grid-cols-2 gap-4 sm:gap-6 mb-6">
-            {/* Smart Cities - Featured card spanning full width */}
+            {/* Intelligent Infrastructure - Featured card */}
             <div className="col-span-2 bg-white border border-gray-300 rounded-lg p-6 sm:p-8 flex flex-col sm:flex-row items-center gap-6">
               <Image
                 src={Industry1}
@@ -86,14 +102,17 @@ export default function IndustriesWeServe() {
                 <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3">
                   Intelligent Infrastructure
                 </h3>
-                <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
-                  Improve municipal services, traffic, and waste systems
+                <p className="text-gray-600 text-sm sm:text-base mb-2">
+                  Urban infrastructure integrated with digital tools to manage energy, waste, and water.
+                </p>
+                <p className="text-gray-500 text-xs italic">
+                  <strong>Example systems:</strong> Digital twins, smart grid, city operations dashboards, municipal utilities.
                 </p>
               </div>
             </div>
           </div>
 
-          {/* Other industries in 2x2 grid */}
+          {/* Other Industries */}
           <div className="grid grid-cols-2 gap-4 sm:gap-6">
             {industries.slice(1).map((industry, index) => (
               <div
@@ -110,17 +129,20 @@ export default function IndustriesWeServe() {
                 <h3 className="text-base sm:text-lg font-bold text-gray-900 mb-2">
                   {industry.title}
                 </h3>
-                <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">
+                <p className="text-gray-600 text-xs sm:text-sm mb-1">
                   {industry.description}
+                </p>
+                <p className="text-gray-500 text-xs italic">
+                  <strong>Example systems:</strong> {industry.examples}
                 </p>
               </div>
             ))}
           </div>
         </div>
 
-        {/* Desktop Layout - Original custom grid */}
+        {/* Desktop Layout */}
         <div className="hidden lg:grid grid-cols-3 grid-rows-2 gap-6 h-[70vh] xl:h-[80vh]">
-          {/* Smart Cities - Large card on the left */}
+          {/* Large Card - Intelligent Infrastructure */}
           <div className="row-span-2 bg-white border border-gray-300 rounded-lg p-6 xl:p-8 flex flex-col justify-around h-full">
             <Image
               src={Industry1}
@@ -133,80 +155,39 @@ export default function IndustriesWeServe() {
               <h3 className="text-lg xl:text-xl font-bold text-gray-900 mb-3">
                 Intelligent Infrastructure
               </h3>
-              <p className="text-gray-600 text-sm leading-relaxed">
-                Improve municipal services, traffic, and waste systems
+              <p className="text-gray-600 text-sm mb-2">
+                Urban infrastructure integrated with digital tools to manage energy, waste, and water.
+              </p>
+              <p className="text-gray-500 text-xs italic">
+                <strong>Example systems:</strong> Digital twins, smart grid, city operations dashboards, municipal utilities.
               </p>
             </div>
           </div>
 
-          {/* Utilities - Top middle */}
-          <div className="bg-white border border-gray-300 rounded-lg p-4 xl:p-6 flex flex-col justify-center">
-            <Image
-              src={Industry2}
-              alt="Telecom & Edge Networks"
-              className="w-full h-32 xl:h-42 object-contain mb-3 xl:mb-4"
-              width={300}
-              height={168}
-            />
-            <h3 className="text-base xl:text-lg font-bold text-gray-900 mb-2">
-              Telecom & Edge Networks
-            </h3>
-            <p className="text-gray-600 text-xs xl:text-sm leading-relaxed">
-              Optimize water, power, and shared resource delivery
-            </p>
-          </div>
-
-          {/* Logistics - Top right */}
-          <div className="bg-white border border-gray-300 rounded-lg p-4 xl:p-6 flex flex-col justify-center">
-            <Image
-              src={Industry4}
-              alt="Connected Mobility"
-              className="w-full h-32 xl:h-42 object-contain mb-3 xl:mb-4"
-              width={300}
-              height={168}
-            />
-            <h3 className="text-base xl:text-lg font-bold text-gray-900 mb-2">
-              Connected Mobility
-            </h3>
-            <p className="text-gray-600 text-xs xl:text-sm leading-relaxed">
-              Enable real-time fleet management and route intelligence
-            </p>
-          </div>
-
-          {/* Public-Private Partnerships - Bottom middle */}
-          <div className="bg-white border border-gray-300 rounded-lg p-4 xl:p-6 flex flex-col justify-center">
-            <Image
-              src={Industry3}
-              alt="Platform Ecosystems"
-              className="w-full h-32 xl:h-42 object-contain mb-3 xl:mb-4"
-              width={300}
-              height={168}
-            />
-            <h3 className="text-base xl:text-lg font-bold text-gray-900 mb-2">
-              Platform Ecosystems
-            </h3>
-            <p className="text-gray-600 text-xs xl:text-sm leading-relaxed">
-              Collaborate through shared platforms and data
-            </p>
-          </div>
-
-          {/* Infrastructure & Mobility - Bottom right */}
-          <div className="bg-white border border-gray-300 rounded-lg p-4 xl:p-6 flex flex-col justify-center">
-            <Image
-              src={Industry5}
-              alt="Autonomous Systems
-& Automation "
-              className="w-full h-32 xl:h-42 object-contain mb-3 xl:mb-4"
-              width={300}
-              height={168}
-            />
-            <h3 className="text-base xl:text-lg font-bold text-gray-900 mb-2">
-              Autonomous Systems & Automation
-            </h3>
-            <p className="text-gray-600 text-xs xl:text-sm leading-relaxed">
-              Build intelligent, self-optimizing networks
-            </p>
-          </div>
+          {/* Remaining 4 Industries */}
+          {industries.slice(1).map((industry, index) => (
+            <div
+              key={index + 1}
+              className="bg-white border border-gray-300 rounded-lg p-4 xl:p-6 flex flex-col justify-center"
+            >
+              <Image
+                src={industry.image}
+                alt={industry.title}
+                className="w-full h-32 xl:h-42 object-contain mb-3 xl:mb-4"
+                width={300}
+                height={168}
+              />
+              <h3 className="text-base xl:text-lg font-bold text-gray-900 mb-2">
+                {industry.title}
+              </h3>
+              <p className="text-gray-600 text-xs xl:text-sm mb-1">
+                {industry.description}
+              </p>
+              <p className="text-gray-500 text-xs italic">
+                <strong>Example systems:</strong> {industry.examples}
+              </p>
+            </div>
+          ))}
         </div>
       </div>
     </section>
