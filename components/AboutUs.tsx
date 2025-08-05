@@ -164,10 +164,10 @@ export default function AboutUs() {
     <section id="about-us" className="py-20 bg-white relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
         <div className="mb-12">
-          <span className="text-[#E0009D] font-semibold text-sm uppercase tracking-wide">
+          <span className="text-3xl text-[#E0009D] font-semibold  uppercase tracking-wide">
             About Us
           </span>
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-4 mb-6">
+          <h2 className="text-2xl md:text-4xl font-bold text-gray-900 mt-4 mb-6">
             Reimagining Coordination Across Infrastructure and Services
           </h2>
         </div>

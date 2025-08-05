@@ -1,8 +1,13 @@
 import Industry1 from "../public/images/industries/i_007 1.svg";
+import Industry1Webp from "../public/images/industries/i_007 1.webp";
 import Industry2 from "../public/images/industries/i_005 1.svg";
+import Industry2Webp from "../public/images/industries/i_005 1.webp";
 import Industry3 from "../public/images/industries/i_009 1.svg";
+import Industry3Webp from "../public/images/industries/i_009 1.webp";
 import Industry4 from "../public/images/industries/i_004 1.svg";
+import Industry4Webp from "../public/images/industries/i_004 1.webp";
 import Industry5 from "../public/images/industries/i_003 1.svg";
+import Industry5Webp from "../public/images/industries/i_003 1.webp";
 import Image from "next/image";
 
 export default function IndustriesWeServe() {
@@ -14,7 +19,7 @@ export default function IndustriesWeServe() {
       examples:
         "Digital twins, smart grid, city operations dashboards, municipal utilities.",
       position: "large-left",
-      image: Industry1,
+      image: Industry1Webp,
     },
     {
       title: "Telecom & Edge Networks",
@@ -23,7 +28,7 @@ export default function IndustriesWeServe() {
       examples:
         "Rakuten’s 5G stack, Open RAN, MEC platforms, fiber rollout planners.",
       position: "top-right",
-      image: Industry2,
+      image: Industry2Webp,
     },
     {
       title: "Connected Mobility",
@@ -31,7 +36,7 @@ export default function IndustriesWeServe() {
         "Smart transportation systems, connected vehicles, and intelligent fleet operations.",
       examples: "Fleet routing.",
       position: "top-far-right",
-      image: Industry4,
+      image: Industry4Webp,
     },
     {
       title: "Platform Ecosystems",
@@ -39,7 +44,7 @@ export default function IndustriesWeServe() {
         "Multi-sided, data platforms enabling coordination across producers and users.",
       examples: "Logistics API, smart waste platforms.",
       position: "bottom-right",
-      image: Industry3,
+      image: Industry3Webp,
     },
     {
       title: "Autonomous Systems & Automation",
@@ -48,7 +53,7 @@ export default function IndustriesWeServe() {
       examples:
         "Robots, smart factories, distributed PLCs, AI-driven quality control.",
       position: "bottom-far-right",
-      image: Industry5,
+      image: Industry5Webp,
     },
   ];
 

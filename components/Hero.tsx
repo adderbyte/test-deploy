@@ -2,9 +2,13 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Illustration from "@/public/images/home/Illustration.svg";
+import IllustationWebp from "@/public/images/home/Illustration.webp";
 import Illustration1 from "@/public/images/home/Illustration1.svg";
+import Illustration1Webp from "@/public/images/home/Illustration1.webp";
 import LogoUp from "@/public/images/home/Up.svg";
+import LogoUpWebp from "@/public/images/home/Up.webp";
 import LogoDown from "@/public/images/home/Down.svg";
+import LogoDownWebp from "@/public/images/home/Down.webp";
 
 export default function Hero() {
   const [animationState, setAnimationState] = useState({ 
@@ -14,7 +18,7 @@ export default function Hero() {
   useEffect(() => {
     const interval = setInterval(() => {
       setAnimationState(prev => ({
-        logo: prev.logo === LogoUp ? LogoDown : LogoUp,
+        logo: prev.logo === LogoUpWebp ? LogoDownWebp : LogoUpWebp,
         img: prev.img === 1 ? 2 : 1
       }));
     }, 2000);
@@ -38,7 +42,7 @@ export default function Hero() {
     // Main section with background gradient and overflow hidden
     <section
       id="home"
-      className="relative bg-gradient-to-br from-gray-50 to-white py-20 overflow-hidden"
+      className="relative bg-gradient-to-br from-gray-10 to-white py-20 overflow-hidden"
     >
       {/* Removed background geometric SVG as it's not in the design */}
 
@@ -90,8 +94,8 @@ export default function Hero() {
               className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat transition-all duration-700 ease-in-out"
               style={{ 
                 backgroundImage: animationState.img === 1 
-                  ? `url(/images/home/Illustration.svg)` 
-                  : `url(/images/home/Illustration1.svg)`
+                  ? `url(/images/home/Illustration.webp)` 
+                  : `url(/images/home/Illustration1.webp)`
               }}
             />
             
