@@ -1,0 +1,58 @@
+/* app/globals.css or styles/globals.css */
+
+/*
+   These three directives are MANDATORY for Tailwind CSS v4.
+   They tell Tailwind to inject its core styles, components, and utilities.
+   They MUST be at the very top of your CSS file.
+*/
+@import "tailwindcss";
+
+
+
+/* Your custom base styles go within @layer base */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply text-gray-900 antialiased;
+  }
+}
+
+/* Your custom component classes go within @layer components */
+@layer components {
+  .btn-primary {
+    @apply bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors;
+  }
+
+  .btn-secondary {
+    @apply border border-gray-300 text-gray-700 px-6 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors;
+  }
+
+  .section-padding {
+    @apply py-20;
+  }
+
+  .container-width {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+}
+
+/* Custom animations (can be outside @layer if not overriding Tailwind's defaults) */
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(5deg); }
+}
+
+.float-animation {
+  animation: float 6s ease-in-out infinite;
+}
+
+.float-animation:nth-child(2) {
+  animation-delay: -2s;
+}
+
+.float-animation:nth-child(3) {
+  animation-delay: -4s;
+}
