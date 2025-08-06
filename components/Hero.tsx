@@ -67,7 +67,7 @@ export default function Hero() {
             {/* Line 3 */}
           </h1>
           <p className="text-lg text-gray-600 mb-8 max-w-xl md:max-w-none mx-auto md:mx-0 leading-relaxed">
-            Polymarq empowers cities, enterprises, and service providers to
+            Polymarq empowers cities, industries, and service providers to
             coordinate better, respond faster, and optimize smarter — turning
             everyday decisions into intelligent actions.
           </p>
@@ -91,7 +91,7 @@ export default function Hero() {
           <div className="relative w-full max-w-sm lg:max-w-md h-94 md:h-96 rounded-lg overflow-hidden">
             {/* Background image with smooth transition */}
             <div 
-              className="absolute inset-0 w-full h-full bg-cover bg-center invisible md:visible bg-no-repeat transition-all duration-700 ease-in-out"
+              className="absolute inset-0 w-full h-[98%] md:h-full bg-cover bg-center visible bg-no-repeat transition-all duration-700 ease-in-out"
               style={{ 
                 backgroundImage: animationState.img === 1 
                   ? `url(/images/home/Illustration1.webp)` 
@@ -99,15 +99,15 @@ export default function Hero() {
               }}
             />
 
-            <div 
+            {/* <div 
               className="absolute inset-0 visible md:invisible w-full h-[98%] bg-cover  bg-center bg-no-repeat transition-all duration-700 ease-in-out"
               style={{ 
                 backgroundImage:`url(/images/Illustration.webp)` 
               }}
-            />
+            /> */}
             
             {/* Logo with smooth transition */}
-            <div className="absolute top-0 invisible md:visible  -right-10 md:right-0">
+            <div className="absolute top-0 visible  -right-10 md:right-0">
               <Image 
                 src={animationState.logo} 
                 alt="logo" 

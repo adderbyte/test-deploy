@@ -1,4 +1,6 @@
+"use client";
 import React from 'react';
+import AnimatedContactUsMono from './ui/buttons/AnimatedContactUsMono';
 
 export default function BuildTogether() {
   return (
@@ -34,11 +36,16 @@ export default function BuildTogether() {
               Get in touch to learn how Polymarq can bring intelligence to your infrastructure or operations.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               {/* Primary CTA Button - white background, dark text */}
-              <button className="bg-white text-gray-800 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors shadow-md">
-                Contact Us
-              </button>
+              <AnimatedContactUsMono
+              hrefr="mailto:support@polymarq.com"
+              stateTexts={{
+                idle: "Contact Us",
+                loading: "Connecting...",
+                success: "Sent!",
+              }}
+            />
               {/* Secondary CTA Button - transparent background, light border, light text */}
               {/* <button className="bg-transparent border border-gray-500 text-gray-300 px-8 py-3 rounded-lg font-semibold hover:bg-gray-700 transition-colors">
                 CTA Button

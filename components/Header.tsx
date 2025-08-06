@@ -5,6 +5,7 @@ import { useState, useRef, useEffect } from "react";
 import AnimatedLogo from "./ui/AnimatedLogo";
 import Logo from "@/public/images/ui/logo.svg";
 import Image from "next/image";
+import AnimatedContactUs from "./ui/buttons/AnimatedContactUs";
 
 export default function Header() {
   // State for managing the visibility of desktop dropdowns and mobile menu
@@ -323,12 +324,14 @@ export default function Header() {
 
           {/* Contact Us Button (Desktop) - Hidden on mobile, block on medium and larger screens */}
           <div className="hidden md:block">
-            <a href="mailto:support@polymarq.com">
-
-            <button className="bg-[#5F57FF] hover:bg-blue-700 text-white px-6 py-3 rounded-lg text-base font-medium transition-colors shadow-md hover:shadow-lg">
-              Contact Us
-            </button>
-            </a>
+            <AnimatedContactUs
+              hrefr="mailto:support@polymarq.com"
+              stateTexts={{
+                idle: "Contact Us",
+                loading: "Connecting...",
+                success: "Sent!",
+              }}
+            />
           </div>
 
           {/* Mobile menu button (Hamburger icon) - Visible on mobile, hidden on medium and larger screens */}
@@ -411,7 +414,6 @@ export default function Header() {
                 </button>
                 {isBlogsOpen && (
                   <div className="pl-6 pt-2 space-y-2">
-                    
                     <Link
                       href="/blogs/Polymarq_Blog_TAAS"
                       className="block text-lg text-gray-700 hover:text-[#5F57FF]"
@@ -525,16 +527,15 @@ export default function Header() {
               </div>
 
               {/* Contact Us */}
-              <div className="pt-4">
-                <a href="mailto:support@polymarq.com">
-
-                <button
-                  className="w-full bg-[#5F57FF] hover:bg-[#5F57FF] text-white px-6 py-3 rounded-md text-base font-medium transition-colors"
-                  onClick={closeMobileMenu}
-                  >
-                  Contact Us
-                </button>
-                  </a>
+              <div className="flex justify-center">
+                <AnimatedContactUs
+              hrefr="mailto:support@polymarq.com"
+              stateTexts={{
+                idle: "Contact Us",
+                loading: "Connecting...",
+                success: "Sent!",
+              }}
+            />
               </div>
             </div>
           </div>
