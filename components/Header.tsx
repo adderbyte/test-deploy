@@ -198,7 +198,7 @@ export default function Header() {
                       className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                       role="menuitem"
                     >
-                      Chips Blog
+                      Edge AI
                     </Link>
                     <Link
                       href="/blogs/updated_two_tier_blog"
@@ -424,8 +424,9 @@ export default function Header() {
                       className="block text-lg text-gray-700 hover:text-[#5F57FF]"
                       onClick={closeMobileMenu}
                     >
-                      Chips Blog
-                    </Link><Link
+                      Edge AI
+                    </Link>
+                    <Link
                       href="/blogs/updated_two_tier_blog"
                       className="block text-lg text-gray-700 hover:text-[#5F57FF]"
                       onClick={closeMobileMenu}
