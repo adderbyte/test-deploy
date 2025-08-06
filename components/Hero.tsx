@@ -94,8 +94,8 @@ export default function Hero() {
               className="absolute inset-0 w-full h-full bg-cover bg-center invisible md:visible bg-no-repeat transition-all duration-700 ease-in-out"
               style={{ 
                 backgroundImage: animationState.img === 1 
-                  ? `url(/images/home/Illustration.webp)` 
-                  : `url(/images/home/Illustration1.webp)`
+                  ? `url(/images/home/Illustration1.webp)` 
+                  : `url(/images/home/Illustration.webp)`
               }}
             />
 
