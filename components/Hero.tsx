@@ -88,7 +88,7 @@ export default function Hero() {
         <div className="w-[100%] md:w-[48%] flex justify-center md:justify-end mt-10 md:mt-0 relative z-0">
           {" "}
           {/* Adjusted md:w-1/2 to md:w-[45%] and added z-0 */}
-          <div className="relative w-full max-w-sm lg:max-w-md h-96 rounded-lg overflow-hidden">
+          <div className="relative w-full max-w-sm lg:max-w-md h-94 md:h-96 rounded-lg overflow-hidden">
             {/* Background image with smooth transition */}
             <div 
               className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat transition-all duration-700 ease-in-out"
