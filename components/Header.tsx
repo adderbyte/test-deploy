@@ -200,6 +200,13 @@ export default function Header() {
                     >
                       Chips Blog
                     </Link>
+                    <Link
+                      href="/blogs/updated_two_tier_blog"
+                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                      role="menuitem"
+                    >
+                      Distributed Two-tier AI
+                    </Link>
                     {/* <Link href="/blogs/case-studies" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">
                       Case Studies
                     </Link>
@@ -404,13 +411,7 @@ export default function Header() {
                 </button>
                 {isBlogsOpen && (
                   <div className="pl-6 pt-2 space-y-2">
-                    <Link
-                      href="/blogs/polymarq-waste-management-blog"
-                      className="block text-lg text-gray-700 hover:text-[#5F57FF]"
-                      onClick={closeMobileMenu}
-                    >
-                      Waste Management Blog
-                    </Link>
+                    
                     <Link
                       href="/blogs/Polymarq_Blog_TAAS"
                       className="block text-lg text-gray-700 hover:text-[#5F57FF]"
@@ -424,6 +425,12 @@ export default function Header() {
                       onClick={closeMobileMenu}
                     >
                       Chips Blog
+                    </Link><Link
+                      href="/blogs/updated_two_tier_blog"
+                      className="block text-lg text-gray-700 hover:text-[#5F57FF]"
+                      onClick={closeMobileMenu}
+                    >
+                      Distributed Two-tier AI
                     </Link>
                   </div>
                 )}
