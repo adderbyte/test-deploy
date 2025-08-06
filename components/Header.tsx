@@ -258,13 +258,13 @@ export default function Header() {
                     >
                       Pricing (Waste Management, Nigeria)
                     </Link>
-                    <Link
+                    {/* <Link
                       href="/resources/faq"
                       className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                       role="menuitem"
                     >
                       FAQ
-                    </Link>
+                    </Link> */}
                   </div>
                 </div>
               )}
@@ -471,13 +471,13 @@ export default function Header() {
                     >
                       Pricing (Waste Management, Nigeria)
                     </Link>
-                    <Link
+                    {/* <Link
                       href="/resources/faq"
                       className="block text-lg text-gray-700 hover:text-[#5F57FF]"
                       onClick={closeMobileMenu}
                     >
                       FAQ
-                    </Link>
+                    </Link> */}
                   </div>
                 )}
               </div>

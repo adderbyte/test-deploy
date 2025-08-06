@@ -14,6 +14,7 @@ import GenSpecial from "@/public/images/blogs/blog-slide/waste-gen/special.png"
 import Management from "@/public/images/blogs/blog-slide/waste-org/management.png"
 import Registration from "@/public/images/blogs/blog-slide/waste-org/registration.png"
 import Optimized from "@/public/images/blogs/blog-slide/waste-org/optimized.png"
+import AnimatedContactUsMono from "@/components/ui/buttons/AnimatedContactUsMono"
 
 import Image from 'next/image';
 
@@ -522,10 +523,18 @@ export default function PolymarqSolutionPage() {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="inline-flex items-center bg-white text-blue-600 px-8 py-3 rounded-xl font-semibold hover:bg-gray-100 transition-all duration-300">
+            <AnimatedContactUsMono
+              hrefr="mailto:support@polymarq.com"
+              stateTexts={{
+                idle: "Get In Touch  Now ",
+                loading: "Connecting...",
+                success: "Sent!",
+              }}
+            />
+            {/* <button className="inline-flex items-center bg-white text-blue-600 px-8 py-3 rounded-xl font-semibold hover:bg-gray-100 transition-all duration-300">
               Get In Touch  Now ...
               <ArrowRight className="w-5 h-5 ml-2" />
-            </button>
+            </button> */}
           </div>
         </section>
 
