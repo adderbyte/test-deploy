@@ -179,13 +179,13 @@ export default function Header() {
                     aria-orientation="vertical"
                     aria-labelledby="blogs-menu-button"
                   >
-                    <Link
+                    {/* <Link
                       href="/blogs/polymarq-waste-management-blog"
                       className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                       role="menuitem"
                     >
                       Waste Management Blog
-                    </Link>
+                    </Link> */}
                     <Link
                       href="/blogs/Polymarq_Blog_TAAS"
                       className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
@@ -316,7 +316,7 @@ export default function Header() {
 
           {/* Contact Us Button (Desktop) - Hidden on mobile, block on medium and larger screens */}
           <div className="hidden md:block">
-            <a href="#about-us">
+            <a href="mailto:support@polymarq.com">
 
             <button className="bg-[#5F57FF] hover:bg-blue-700 text-white px-6 py-3 rounded-lg text-base font-medium transition-colors shadow-md hover:shadow-lg">
               Contact Us
@@ -518,7 +518,7 @@ export default function Header() {
 
               {/* Contact Us */}
               <div className="pt-4">
-                <a href="#about-us">
+                <a href="mailto:support@polymarq.com">
 
                 <button
                   className="w-full bg-[#5F57FF] hover:bg-[#5F57FF] text-white px-6 py-3 rounded-md text-base font-medium transition-colors"

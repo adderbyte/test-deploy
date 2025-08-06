@@ -104,7 +104,7 @@ export default function SolutionsOverview() {
               {/* Header */}
               <div>
                 <div className="flex items-center mb-2">
-                  <span className="text-sm sm:text-md font-bold text-[#E0009D] py-1 rounded">
+                  <span className="text-sm sm:text-md font-bold text-[#E0009D] py-1 px-2 bg-white rounded-full">
                     {currentSolution.category}
                   </span>
                 </div>
