@@ -91,14 +91,23 @@ export default function Hero() {
           <div className="relative w-full max-w-sm lg:max-w-md h-94 md:h-96 rounded-lg overflow-hidden">
             {/* Background image with smooth transition */}
             <div 
-              className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat transition-all duration-700 ease-in-out"
+              className="absolute inset-0 w-full h-full bg-cover bg-center invisible md:visible bg-no-repeat transition-all duration-700 ease-in-out"
+              style={{ 
+                backgroundImage: animationState.img === 1 
+                  ? `url(/images/home/Illustration.webp)` 
+                  : `url(/images/home/Illustration1.webp)`
+              }}
+            />
+
+            <div 
+              className="absolute inset-0 visible md:invisible w-full h-[98%] bg-cover  bg-center bg-no-repeat transition-all duration-700 ease-in-out"
               style={{ 
                 backgroundImage:`url(/images/Illustration.webp)` 
               }}
             />
             
             {/* Logo with smooth transition */}
-            {/* <div className="absolute top-0 -right-10 md:right-0">
+            <div className="absolute top-0 invisible md:visible  -right-10 md:right-0">
               <Image 
                 src={animationState.logo} 
                 alt="logo" 
@@ -106,7 +115,7 @@ export default function Hero() {
                 height={100} 
                 className="transition-all duration-700 ease-in-out"
               />
-            </div> */}
+            </div>
           </div>
         </div>
       </div>
