@@ -147,6 +147,108 @@ export default function Header() {
               Solutions
             </Link>
 
+            {/* Desktop Products Dropdown */}
+            <div className="relative" ref={productsRef}>
+              <button
+                className="text-gray-700 text-base font-medium hover:text-[#5F57FF] flex items-center space-x-1 transition-colors focus:outline-none"
+                onClick={toggleProducts}
+              >
+                <span>Products</span>
+                {/* Dropdown arrow icon, rotates when open */}
+                <svg
+                  className={`w-4 h-4 transform transition-transform duration-200 ${
+                    isProductsOpen ? "rotate-180" : ""
+                  }`}
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </button>
+              {isProductsOpen && (
+                <div className="absolute left-1/2 transform -translate-x-1/2 mt-3 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
+                  <div
+                    className="py-1"
+                    role="menu"
+                    aria-orientation="vertical"
+                    aria-labelledby="products-menu-button"
+                  >
+                    <Link
+                      href="#products"
+                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                      role="menuitem"
+                    >
+                      Smart Waste Management
+                    </Link>
+                  </div>
+                </div>
+              )}
+            </div>
+
+            {/* Desktop Resources Dropdown */}
+            <div className="relative" ref={resourcesRef}>
+              <button
+                className="text-gray-700 text-base font-medium hover:text-[#5F57FF] flex items-center space-x-1 transition-colors focus:outline-none"
+                onClick={toggleResources}
+              >
+                <span>Resources</span>
+                {/* Dropdown arrow icon, rotates when open */}
+                <svg
+                  className={`w-4 h-4 transform transition-transform duration-200 ${
+                    isResourcesOpen ? "rotate-180" : ""
+                  }`}
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M19 9l-7 7-7-7"
+                  />
+                </svg>
+              </button>
+              {isResourcesOpen && (
+                <div className="absolute left-1/2 transform -translate-x-1/2 mt-3 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
+                  <div
+                    className="py-1"
+                    role="menu"
+                    aria-orientation="vertical"
+                    aria-labelledby="resources-menu-button"
+                  >
+                    <Link
+                      href="https://pricing.polymarq.com/"
+                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                      role="menuitem"
+                    >
+                      Pricing (Waste Management, Nigeria)
+                    </Link>
+                    {/* <Link
+                      href="/resources/faq"
+                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                      role="menuitem"
+                    >
+                      FAQ
+                    </Link> */}
+                  </div>
+                </div>
+              )}
+            </div>
+
+            <Link
+              href="#focus-areas"
+              className="text-gray-700 text-base font-medium hover:text-[#5F57FF] transition-colors"
+            >
+              Focus Areas
+            </Link>
+
             {/* Desktop Blogs Dropdown */}
             <div className="relative" ref={blogsRef}>
               <button
@@ -214,108 +316,6 @@ export default function Header() {
                     <Link href="/blogs" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 border-t border-gray-100 font-medium" role="menuitem">
                       View All Blogs
                     </Link> */}
-                  </div>
-                </div>
-              )}
-            </div>
-
-            {/* Desktop Resources Dropdown */}
-            <div className="relative" ref={resourcesRef}>
-              <button
-                className="text-gray-700 text-base font-medium hover:text-[#5F57FF] flex items-center space-x-1 transition-colors focus:outline-none"
-                onClick={toggleResources}
-              >
-                <span>Resources</span>
-                {/* Dropdown arrow icon, rotates when open */}
-                <svg
-                  className={`w-4 h-4 transform transition-transform duration-200 ${
-                    isResourcesOpen ? "rotate-180" : ""
-                  }`}
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M19 9l-7 7-7-7"
-                  />
-                </svg>
-              </button>
-              {isResourcesOpen && (
-                <div className="absolute left-1/2 transform -translate-x-1/2 mt-3 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
-                  <div
-                    className="py-1"
-                    role="menu"
-                    aria-orientation="vertical"
-                    aria-labelledby="resources-menu-button"
-                  >
-                    <Link
-                      href="https://pricing.polymarq.com/"
-                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                      role="menuitem"
-                    >
-                      Pricing (Waste Management, Nigeria)
-                    </Link>
-                    {/* <Link
-                      href="/resources/faq"
-                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                      role="menuitem"
-                    >
-                      FAQ
-                    </Link> */}
-                  </div>
-                </div>
-              )}
-            </div>
-
-            <Link
-              href="#focus-areas"
-              className="text-gray-700 text-base font-medium hover:text-[#5F57FF] transition-colors"
-            >
-              Focus Areas
-            </Link>
-
-            {/* Desktop Products Dropdown */}
-            <div className="relative" ref={productsRef}>
-              <button
-                className="text-gray-700 text-base font-medium hover:text-[#5F57FF] flex items-center space-x-1 transition-colors focus:outline-none"
-                onClick={toggleProducts}
-              >
-                <span>Products</span>
-                {/* Dropdown arrow icon, rotates when open */}
-                <svg
-                  className={`w-4 h-4 transform transition-transform duration-200 ${
-                    isProductsOpen ? "rotate-180" : ""
-                  }`}
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M19 9l-7 7-7-7"
-                  />
-                </svg>
-              </button>
-              {isProductsOpen && (
-                <div className="absolute left-1/2 transform -translate-x-1/2 mt-3 w-56 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
-                  <div
-                    className="py-1"
-                    role="menu"
-                    aria-orientation="vertical"
-                    aria-labelledby="products-menu-button"
-                  >
-                    <Link
-                      href="#products"
-                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                      role="menuitem"
-                    >
-                      Smart Waste Management
-                    </Link>
                   </div>
                 </div>
               )}
@@ -389,16 +389,17 @@ export default function Header() {
                 Solutions
               </Link>
 
-              {/* Blogs Dropdown */}
+             
+              {/* Products Dropdown */}
               <div>
                 <button
                   className="w-full text-left text-xl font-medium text-gray-800 hover:text-[#5F57FF] flex items-center justify-between py-2 px-3 rounded-md"
-                  onClick={toggleBlogs}
+                  onClick={toggleProducts}
                 >
-                  <span>Blogs</span>
+                  <span>Products</span>
                   <svg
                     className={`w-6 h-6 transform transition-transform duration-200 ${
-                      isBlogsOpen ? "rotate-180" : ""
+                      isProductsOpen ? "rotate-180" : ""
                     }`}
                     fill="none"
                     stroke="currentColor"
@@ -412,33 +413,18 @@ export default function Header() {
                     />
                   </svg>
                 </button>
-                {isBlogsOpen && (
+                {isProductsOpen && (
                   <div className="pl-6 pt-2 space-y-2">
                     <Link
-                      href="/blogs/Polymarq_Blog_TAAS"
+                      href="#products"
                       className="block text-lg text-gray-700 hover:text-[#5F57FF]"
                       onClick={closeMobileMenu}
                     >
-                      Blog TAAS
-                    </Link>
-                    <Link
-                      href="/blogs/polymarq-chips-blog"
-                      className="block text-lg text-gray-700 hover:text-[#5F57FF]"
-                      onClick={closeMobileMenu}
-                    >
-                      Edge AI
-                    </Link>
-                    <Link
-                      href="/blogs/updated_two_tier_blog"
-                      className="block text-lg text-gray-700 hover:text-[#5F57FF]"
-                      onClick={closeMobileMenu}
-                    >
-                      Distributed Two-tier AI
+                      Smart Waste Management
                     </Link>
                   </div>
                 )}
               </div>
-
               {/* Resources Dropdown */}
               <div>
                 <button
@@ -490,16 +476,16 @@ export default function Header() {
                 Focus Areas
               </Link>
 
-              {/* Products Dropdown */}
+              {/* Blogs Dropdown */}
               <div>
                 <button
                   className="w-full text-left text-xl font-medium text-gray-800 hover:text-[#5F57FF] flex items-center justify-between py-2 px-3 rounded-md"
-                  onClick={toggleProducts}
+                  onClick={toggleBlogs}
                 >
-                  <span>Products</span>
+                  <span>Blogs</span>
                   <svg
                     className={`w-6 h-6 transform transition-transform duration-200 ${
-                      isProductsOpen ? "rotate-180" : ""
+                      isBlogsOpen ? "rotate-180" : ""
                     }`}
                     fill="none"
                     stroke="currentColor"
@@ -513,14 +499,28 @@ export default function Header() {
                     />
                   </svg>
                 </button>
-                {isProductsOpen && (
+                {isBlogsOpen && (
                   <div className="pl-6 pt-2 space-y-2">
                     <Link
-                      href="#products"
+                      href="/blogs/Polymarq_Blog_TAAS"
                       className="block text-lg text-gray-700 hover:text-[#5F57FF]"
                       onClick={closeMobileMenu}
                     >
-                      Smart Waste Management
+                      Blog TAAS
+                    </Link>
+                    <Link
+                      href="/blogs/polymarq-chips-blog"
+                      className="block text-lg text-gray-700 hover:text-[#5F57FF]"
+                      onClick={closeMobileMenu}
+                    >
+                      Edge AI
+                    </Link>
+                    <Link
+                      href="/blogs/updated_two_tier_blog"
+                      className="block text-lg text-gray-700 hover:text-[#5F57FF]"
+                      onClick={closeMobileMenu}
+                    >
+                      Distributed Two-tier AI
                     </Link>
                   </div>
                 )}
@@ -529,13 +529,13 @@ export default function Header() {
               {/* Contact Us */}
               <div className="flex justify-center">
                 <AnimatedContactUs
-              hrefr="mailto:support@polymarq.com"
-              stateTexts={{
-                idle: "Contact Us",
-                loading: "Connecting...",
-                success: "Sent!",
-              }}
-            />
+                  hrefr="mailto:support@polymarq.com"
+                  stateTexts={{
+                    idle: "Contact Us",
+                    loading: "Connecting...",
+                    success: "Sent!",
+                  }}
+                />
               </div>
             </div>
           </div>
