@@ -91,7 +91,7 @@ export default function Hero() {
           <div className="relative w-full max-w-sm lg:max-w-md h-94 md:h-96 rounded-lg overflow-hidden">
             {/* Background image with smooth transition */}
             <div 
-              className="absolute inset-0 w-full h-[98%] md:h-full bg-cover bg-center visible bg-no-repeat transition-all duration-700 ease-in-out"
+              className="absolute inset-0 w-full h-[98%] md:h-full bg-cover bg-center  bg-no-repeat transition-all duration-700 ease-in-out"
               style={{ 
                 backgroundImage: animationState.img === 1 
                   ? `url(/images/home/Illustration1.webp)` 
