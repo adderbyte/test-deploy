@@ -1,19 +1,26 @@
 import Facebook from "@/public/images/socials/facebook.svg";
+import Instagram from "@/public/images/socials/instagram.svg";
 import X from "@/public/images/socials/x.svg";
 import Youtube from "@/public/images/socials/youtube.svg";
-import Instagram from "@/public/images/socials/instagram.svg";
 import Image from "next/image";
 
 export default function Footer() {
   return (
     <footer className="bg-gray-900 text-white py-12 overflow-clip">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-[80vw] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row justify-center  mb-8">
-          <div className="grid md:grid-cols-4 gap-2">
-            <div>
+          <div className="grid md:grid-cols-5 gap-2">
+            <div className="col-span-2">
               <h3 className="text-2xl font-bold mb-4">Polymarq</h3>
               <p className="text-gray-400 mb-4">
                 Building the intelligence layer for real-world systems.
+              </p>
+              <p className="text-md text-gray-400 ">
+                <b>Contact Address:</b> <br/> <b>Nigeria :</b> Otasunsmi Street, Ejigbo, Lagos, Nigeria.<br/>
+                <b>South Korea :</b> 231-68, Mok2Dong, YangCheonGu, Seoul, South Korea
+              </p>
+              <p className="text-md text-gray-400 ">
+                Company Registration: RC-7204929{" "}
               </p>
             </div>
 
@@ -67,8 +74,13 @@ export default function Footer() {
                   </a>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-white">
+                  <a href="#about-us" className="hover:text-white">
                     Support
+                  </a>
+                </li>
+                <li>
+                  <a href="/terms-and-conditions" className="hover:text-white">
+                    Terms and Conditions
                   </a>
                 </li>
               </ul>
@@ -79,11 +91,11 @@ export default function Footer() {
               <Image
                 src={Facebook}
                 alt="Facebook"
-                className="w-12 h-12 inline-block"
+                className="w-8 h-8 inline-block"
               />
             </a>
             <a href="https://twitter.com/true_polymarq">
-              <Image src={X} alt="X" className="w-12 h-12 inline-block " />
+              <Image src={X} alt="X" className="w-8 h-8 inline-block " />
             </a>
             {/* <a href="https://www.youtube.com/@true_polymarq">
               <Image
@@ -95,7 +107,7 @@ export default function Footer() {
               <Image
                 src={Instagram}
                 alt="Instagram"
-                className="w-12 h-12 inline-block"
+                className="w-8 h-8 inline-block"
               />
             </a>
           </div>
