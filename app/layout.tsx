@@ -1,8 +1,9 @@
 // app/layout.tsx
 
+import CookieConsentBanner from '@/components/cookie_banner'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
-import './globals.css' // Crucial for Tailwind CSS
+import './globals.css'; // Crucial for Tailwind CSS
 
 // 1. Import your Header component
 //    Adjust the path if your Header.tsx/js is not directly in the 'components' folder.
@@ -27,6 +28,7 @@ export default function RootLayout({
         
         {/* This is where your page content will be rendered */}
         {children}
+        <CookieConsentBanner/>
       </body>
     </html>
   )
