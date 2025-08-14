@@ -1,14 +1,14 @@
 "use client";
-import React, { useEffect, useState } from "react";
-import Image from "next/image";
+import LogoDown from "@/public/images/home/Down.svg";
+import LogoDownWebp from "@/public/images/home/Down.webp";
 import Illustration from "@/public/images/home/Illustration.svg";
 import IllustationWebp from "@/public/images/home/Illustration.webp";
 import Illustration1 from "@/public/images/home/Illustration1.svg";
 import Illustration1Webp from "@/public/images/home/Illustration1.webp";
 import LogoUp from "@/public/images/home/Up.svg";
 import LogoUpWebp from "@/public/images/home/Up.webp";
-import LogoDown from "@/public/images/home/Down.svg";
-import LogoDownWebp from "@/public/images/home/Down.webp";
+import Image from "next/image";
+import React, { useEffect, useState } from "react";
 
 export default function Hero() {
   const [animationState, setAnimationState] = useState({ 
@@ -53,7 +53,7 @@ export default function Hero() {
         <div className="text-center md:text-left md:w-[55%] relative z-10">
           {" "}
           {/* Adjusted md:w-1/2 to md:w-[55%] and added z-10 */}
-          <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+          <h1 className="text-4xl md:text-7xl font-bold text-gray-900 mb-6 leading-tight">
             Building the {/* Line 1 */}
             {/* "Intelligence Layer for" on one line, with "Intelligence" highlighted, forced no-wrap */}
             <span className="block whitespace-nowrap">
