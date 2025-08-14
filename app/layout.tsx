@@ -1,8 +1,8 @@
 // app/layout.tsx
 
-import CookieConsentBanner from '@/components/cookie_banner'
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import CookieConsentBanner from '@/components/cookie_banner';
+import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
 import './globals.css'; // Crucial for Tailwind CSS
 
 // 1. Import your Header component
